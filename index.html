@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Website Landing Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <section>
+        <!-- 뒷 배경 영역-->
+        <div class="circle"></div>
+        <!-- 헤더 영역 -->
+        <header>
+            <!--로고영역 -->
+            <a href="#" class="logo"><img src="./img/logo.png" alt="로고이미지"></a>
+            <!--메뉴영역 -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <!-- 콘텐트 영역 -->
+        <div class="content">
+            <div class="textbox">
+                <h2>It's not just Coffee<br>lt's <span>Starbucks</span></h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore quae excepturi
+                    sapiente voluptate praesentium! Sunt quasi architecto, autem facilis tempora 
+                    iste odit, veniam fugit ipsa, sequi aspernatur dolore saepe similique!</p>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- 이미지 영역-->
+            <div class="imgbox">
+                <img src="./img/img1.png" alt="img1.png" class="starbucks">
+            </div>
+        </div>
+        <!-- 썸네일 이미지 영역 -->
+        <ul class="thumb">
+            <li><img src="./img/thumb1.png" alt="thumb1.png" onClick="imgSlider('./img/img1.png'); changeCircleColor('#017143');"></li>
+            <li><img src="./img/thumb2.png" alt="thumb2.png" onClick="imgSlider('./img/img2.png'); changeCircleColor('#EB7495');"></li>
+            <li><img src="./img/thumb3.png" alt="thumb3.png" onClick="imgSlider('./img/img3.png'); changeCircleColor('#D752B1');"></li>
+        </ul>
+        <!-- 소셜 영역-->
+        <ul class="sci">
+            <li><a href="#"><img src="./img/facebook.png" alt="facebook.png"></a></li>
+            <li><a href="#"><img src="./img/twitter.png" alt="twitter.png"></a></li>
+            <li><a href="#"><img src="./img/instagram.png" alt="instagram.png"></a></li>
+        </ul>
+    </section>
+    <!-- 자바스트립트 영역 -->
+    <script type="text/javascript">
+        //이미지 바꾸기 이벤트
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+        }
+        //뒷 배경색 바꾸기 이벤트
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+
+
+    </script>
+</body>
+</html>
